@@ -302,10 +302,10 @@ class rzvy_update{
 		}
 		/** Version 2.9 */
 		if($current_version<2.9){
-			mysqli_query($conn, "ALTER TABLE `rzvy_customers` ADD `dob` DATE NOT NULL DEFAULT '2020-01-01' AFTER `refferral_code`;");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_customers` ADD `internal_notes` TEXT NOT NULL AFTER `dob`;");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_customer_orderinfo` ADD `c_dob` DATE NOT NULL DEFAULT '2020-01-01' AFTER `c_zip`;");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_customer_orderinfo` ADD `c_notes` TEXT NOT NULL AFTER `c_dob`;");		
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_customers` ADD `dob` DATE NOT NULL DEFAULT '2020-01-01' AFTER `refferral_code`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_customers` ADD `internal_notes` TEXT NOT NULL AFTER `dob`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_customer_orderinfo` ADD `c_dob` DATE NOT NULL DEFAULT '2020-01-01' AFTER `c_zip`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_customer_orderinfo` ADD `c_notes` TEXT NOT NULL AFTER `c_dob`;"); } catch (Exception $e) {}		
 			
 			/** Add templates queries below **/
 			$this->add_referral_template($conn);
@@ -369,7 +369,7 @@ class rzvy_update{
 			  `linked_subcat` text NOT NULL,
 			  PRIMARY KEY (`id`)
 			);");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_coupons` ADD `front_status` ENUM('Y','N') NOT NULL DEFAULT 'Y' AFTER `status`;");	
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_coupons` ADD `front_status` ENUM('Y','N') NOT NULL DEFAULT 'Y' AFTER `status`;"); } catch (Exception $e) {}	
 			
 			/** Update into table queries below **/
 			$settings_array = array(
@@ -595,7 +595,7 @@ class rzvy_update{
 		
 		/* Version 5.1 */
 		if($current_version<5.1){	
-			mysqli_query($conn, "ALTER TABLE `rzvy_coupons` ADD `coupon_start` DATE NOT NULL AFTER `front_status`;");
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_coupons` ADD `coupon_start` DATE NOT NULL AFTER `front_status`;"); } catch (Exception $e) {}
 				
 			/** Update into table queries below **/
 			$settings_array = array(
