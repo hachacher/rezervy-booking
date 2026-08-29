@@ -156,10 +156,10 @@ class rzvy_update{
 							  );
 			$this->insert_admin_setting_options($conn, $settings_array);				
 			
-			mysqli_query($conn, "ALTER TABLE `rzvy_bookings` CHANGE `staff_id` `staff_id` VARCHAR(500) NOT NULL;");			
-			mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `min_limit` INT NOT NULL DEFAULT '1' AFTER `max_limit`;");			
-			mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `badge` ENUM('Y','N') NOT NULL DEFAULT 'N' AFTER `locations`, ADD `badge_text` VARCHAR(10) NOT NULL AFTER `badge`;");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_payments` ADD `partial_deposite` DOUBLE NOT NULL AFTER `refer_discount_id`;");	
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_bookings` CHANGE `staff_id` `staff_id` VARCHAR(500) NOT NULL;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `min_limit` INT NOT NULL DEFAULT '1' AFTER `max_limit`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `badge` ENUM('Y','N') NOT NULL DEFAULT 'N' AFTER `locations`, ADD `badge_text` VARCHAR(10) NOT NULL AFTER `badge`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_payments` ADD `partial_deposite` DOUBLE NOT NULL AFTER `refer_discount_id`;"); } catch (Exception $e) {}	
 			
 			/* Execute version update query */
 			$this->rzvy_update_version_option("1.7",$conn);
@@ -179,10 +179,10 @@ class rzvy_update{
 		
 		/** Version 2.0 */
 		if($current_version<2.0){
-			mysqli_query($conn, "ALTER TABLE `rzvy_categories` ADD `position` INT NOT NULL AFTER `image`;");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `pos_accordingcat` INT NOT NULL AFTER `badge_text`;");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `pos_accordingser` INT NOT NULL AFTER `pos_accordingcat`;");	
-			mysqli_query($conn, "ALTER TABLE `rzvy_service_addons` ADD `position` INT NOT NULL AFTER `service_id`;");	
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_categories` ADD `position` INT NOT NULL AFTER `image`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `pos_accordingcat` INT NOT NULL AFTER `badge_text`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `pos_accordingser` INT NOT NULL AFTER `pos_accordingcat`;"); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_service_addons` ADD `position` INT NOT NULL AFTER `service_id`;"); } catch (Exception $e) {}	
 			
 			/* Execute version update query */
 			$this->rzvy_update_version_option("2.0",$conn);
@@ -225,8 +225,8 @@ class rzvy_update{
 		
 		/** Version 2.5 */
 		if($current_version<2.5){
-			mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `duration` INT NOT NULL AFTER `min_limit`; ");
-			mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `badge` ENUM('Y','N') NOT NULL DEFAULT 'N' AFTER `duration`, ADD `badge_text` VARCHAR(10) NOT NULL AFTER `badge`;");	
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `duration` INT NOT NULL AFTER `min_limit`; "); } catch (Exception $e) {}
+			try { mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `badge` ENUM('Y','N') NOT NULL DEFAULT 'N' AFTER `duration`, ADD `badge_text` VARCHAR(10) NOT NULL AFTER `badge`;"); } catch (Exception $e) {}	
 			mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `rzvy_loyalty_points` (
 								  `id` int(11) NOT NULL AUTO_INCREMENT,
 								  `order_id` int(11) NOT NULL,
