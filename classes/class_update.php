@@ -74,8 +74,8 @@ class rzvy_update{
 		}
 		/** Version 1.3 */
 		if($current_version<1.3){
-			mysqli_query($conn, "ALTER TABLE `rzvy_categories` ADD `image` VARCHAR(255) NOT NULL;");
-			mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `locations` LONGTEXT NOT NULL;");			
+			@mysqli_query($conn, "ALTER TABLE `rzvy_categories` ADD `image` VARCHAR(255) NOT NULL;");
+			@mysqli_query($conn, "ALTER TABLE `rzvy_services` ADD `locations` LONGTEXT NOT NULL;");			
 						
 			/* Execute version update query */
 			$this->rzvy_update_version_option("1.3",$conn);
@@ -119,7 +119,7 @@ class rzvy_update{
 		}
 		/** Version 1.6 */
 		if($current_version<1.6){
-			mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `max_limit` INT NOT NULL DEFAULT '1' AFTER `description`;");			
+			@mysqli_query($conn, "ALTER TABLE `rzvy_addons` ADD `max_limit` INT NOT NULL DEFAULT '1' AFTER `description`;");			
 			/* Execute version update query */
 			$this->rzvy_update_version_option("1.6",$conn);
 		}
