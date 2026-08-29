@@ -9,6 +9,7 @@ vendor/
 !/includes/vendor/
 composer.lock
 /uploads/images/*
+!/uploads/images/
 !/uploads/images/.gitkeep
 .git/
 .vscode/
