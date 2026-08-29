@@ -20,7 +20,7 @@ class rzvy_slots{
 	public $rzvy_staff = 'rzvy_staff';
 	
 	/* Function to get already booked slots */
-	public function get_already_booked_slots($selected_date,$cur_time_interval,$service_id=0, $service_padding_before, $service_padding_after){
+	public function get_already_booked_slots($selected_date,$cur_time_interval,$service_id=0, $service_padding_before=0, $service_padding_after=0){
 		$return_arr = array();
 		/* if($service_id!='0' && is_numeric($service_id)){
 			$query="select `order_id`, `booking_datetime`, `booking_end_datetime` from `".$this->rzvy_bookings."` where CAST(`booking_datetime` as date)='".$selected_date."' and (`booking_status`='pending' OR `booking_status`='confirmed' OR `booking_status`='confirmed_by_staff' OR `booking_status`='rescheduled_by_you' OR `booking_status`='rescheduled_by_customer' OR `booking_status`='rescheduled_by_staff') and service_id='".$service_id."' group by `order_id`,`booking_datetime`, `booking_end_datetime`";
