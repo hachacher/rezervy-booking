@@ -1,6 +1,5 @@
 {
   "build": {
-    "builder": "heroku.buildpacks",
-    "buildpacks": ["heroku/php"]
+    "builder": "NIXPACKS"
   }
 }
