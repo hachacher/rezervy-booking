@@ -329,17 +329,6 @@ if($dash_title == ""){
     </div>
     <ul class="rzvy_menubar_nav_list">
 	
-		<!-- External Addons -->
-		<?php if(isset($rzvy_rolepermissions['rzvy_extaddons']) || $rzvy_loginutype=='admin'){ ?>
-			<li <?php if (strpos($_SERVER['SCRIPT_NAME'], 'external-addons.php') != false) { echo 'class="rzvy_menubar_nav_active"'; } ?>>
-				<a href="<?php echo SITE_URL; ?>backend/external-addons.php">
-				  <i class="fa fa-fw fa-shopping-cart"></i>
-				  <span class="rzvy_menubar_nav_name">External Addons</span>
-				</a>
-				<span class="rzvy_menubar_nav_tooltip">External Addons</span>
-			</li>
-		<?php } ?>
-		
 		<!-- Dashboard -->
 		<?php if(isset($rzvy_rolepermissions['rzvy_dashboard']) || $rzvy_loginutype=='admin'){ ?>
 			<li <?php if (strpos($_SERVER['SCRIPT_NAME'], 'dashboard.php') != false) { echo 'class="rzvy_menubar_nav_active"'; } ?>>
