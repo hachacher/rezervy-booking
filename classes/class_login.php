@@ -92,7 +92,8 @@ class rzvy_login{
 				echo 'staff';
             }else{
 				/* Check email address and password are correct or not in admins table */
-				$query = "select * from `".$this->rzvy_admins."` where `email`='".$this->email."' and `password`='".md5($this->password)."' and `status`='Y'";
+				$hash = md5($this->password);
+				$query = "select * from `".$this->rzvy_admins."` where `email`='".$this->email."' and `password`='".$hash."' and `status`='Y'";
 				$result=mysqli_query($this->conn,$query);
 				
 				/* To check admin exist or not */

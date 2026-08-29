@@ -13,7 +13,7 @@ $obj_settings->conn = $conn;
 /* Login process ajax */
 if(isset($_POST['login_process'])){
 	$obj_login->email = trim(strip_tags(mysqli_real_escape_string($conn, $_POST['email'])));
-	$obj_login->password = $_POST['password'];
+	$obj_login->password = trim($_POST['password']);
 	$obj_login->remember_me = $_POST['remember_me'];
 	
 	/* Function to check login details */
