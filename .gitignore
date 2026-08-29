@@ -6,6 +6,7 @@
 .env.local
 node_modules/
 vendor/
+!/includes/vendor/rzvyconcent/
 composer.lock
 /uploads/images/*
 !/uploads/images/.gitkeep
