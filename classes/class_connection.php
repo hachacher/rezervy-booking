@@ -13,7 +13,8 @@ class rzvy_database{
 				echo "<b>Check <a href='".SITE_URL."installation-instruction.php'>installation instructions</a> to resolve this problem.</b>";
 				exit;
 			}else{
-				$conn = new mysqli(rzvy_HOSTNAME, rzvy_USERNAME, rzvy_PASSWORD, rzvy_DATABASE);
+				$port = defined('rzvy_PORT') ? rzvy_PORT : 3306;
+				$conn = new mysqli(rzvy_HOSTNAME, rzvy_USERNAME, rzvy_PASSWORD, rzvy_DATABASE, $port);
 				/* Check connection */
 				if ($conn->connect_error) {
 					@ob_clean();
