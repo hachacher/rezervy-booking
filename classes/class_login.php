@@ -35,9 +35,9 @@ class rzvy_login{
 				unset($_COOKIE['rzvy_email']);
 				unset($_COOKIE['rzvy_password']);
 				unset($_COOKIE['rzvy_remember_me']);
-				setcookie('rzvy_email',null, -1, '/');
-				setcookie('rzvy_password',null, -1, '/');
-				setcookie('rzvy_remember_me',null, -1, '/');
+				setcookie('rzvy_email','', -1, '/');
+				setcookie('rzvy_password','', -1, '/');
+				setcookie('rzvy_remember_me','', -1, '/');
 			}
             echo "customer";
         }else{
@@ -85,9 +85,9 @@ class rzvy_login{
 					unset($_COOKIE['rzvy_email']);
 					unset($_COOKIE['rzvy_password']);
 					unset($_COOKIE['rzvy_remember_me']);
-					setcookie('rzvy_email',null, -1, '/');
-					setcookie('rzvy_password',null, -1, '/');
-					setcookie('rzvy_remember_me',null, -1, '/');
+					setcookie('rzvy_email','', -1, '/');
+					setcookie('rzvy_password','', -1, '/');
+					setcookie('rzvy_remember_me','', -1, '/');
 				}
 				echo 'staff';
             }else{
@@ -116,9 +116,9 @@ class rzvy_login{
 						unset($_COOKIE['rzvy_email']);
 						unset($_COOKIE['rzvy_password']);
 						unset($_COOKIE['rzvy_remember_me']);
-						setcookie('rzvy_email',null, -1, '/');
-						setcookie('rzvy_password',null, -1, '/');
-						setcookie('rzvy_remember_me',null, -1, '/');
+						setcookie('rzvy_email','', -1, '/');
+						setcookie('rzvy_password','', -1, '/');
+						setcookie('rzvy_remember_me','', -1, '/');
 					}
 					echo 'admin';
 				}else{
