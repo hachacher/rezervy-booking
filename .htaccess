@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?c/(.*?)/?$ /includes/lib/rzvy_cancel.php?bid=$1 [L]
+RewriteRule ^/?f/(.*?)/?$ /includes/lib/rzvy_feedback.php?bid=$1 [L]
+

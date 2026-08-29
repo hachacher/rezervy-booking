@@ -1,0 +1,117 @@
+/*
+* rzvy
+* Online Multi Business Appointment Scheduling & Reservation Booking Calendar
+*/
+#rzvy_invoice_container{
+    margin-top:20px;
+    color: #484b51;
+}
+#rzvy_invoice_container .text-secondary-d1 {
+    color: #728299!important;
+}
+#rzvy_invoice_container .page-header {
+    margin: 0 0 1rem;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
+    border-bottom: 1px dotted #e2e2e2;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#rzvy_invoice_container .page-title {
+    padding: 0;
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+#rzvy_invoice_container .brc-default-l1 {
+    border-color: #dce9f0!important;
+}
+
+#rzvy_invoice_container .ml-n1, .mx-n1 {
+    margin-left: -.25rem!important;
+}
+#rzvy_invoice_container .mr-n1, .mx-n1 {
+    margin-right: -.25rem!important;
+}
+#rzvy_invoice_container .mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+}
+#rzvy_invoice_container hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+#rzvy_invoice_container .text-grey-m2 {
+    color: #888a8d!important;
+}
+
+#rzvy_invoice_container .text-success-m2 {
+    color: #86bd68!important;
+}
+#rzvy_invoice_container .font-bolder, .text-600 {
+    font-weight: 600!important;
+}
+
+#rzvy_invoice_container .text-110 {
+    font-size: 110%!important;
+}
+#rzvy_invoice_container .text-blue {
+    color: #478fcc!important;
+}
+#rzvy_invoice_container .pb-25, .py-25 {
+    padding-bottom: .75rem!important;
+}
+
+#rzvy_invoice_container .pt-25, .py-25 {
+    padding-top: .75rem!important;
+}
+#rzvy_invoice_container .bgc-default-tp1 {
+    background-color: rgba(121,169,197,.92)!important;
+}
+#rzvy_invoice_container .bgc-default-l4, .bgc-h-default-l4:hover {
+    background-color: #f3f8fa!important;
+}
+#rzvy_invoice_container .page-header .page-tools {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+#rzvy_invoice_container .btn-light {
+    color: #757984;
+    background-color: #f5f6f9;
+    border-color: #dddfe4;
+}
+#rzvy_invoice_container .w-2 {
+    width: 1rem;
+}
+
+#rzvy_invoice_container .text-120 {
+    font-size: 120%!important;
+}
+#rzvy_invoice_container .text-primary-m1 {
+    color: #4087d4!important;
+}
+
+#rzvy_invoice_container .text-danger-m1 {
+    color: #dd4949!important;
+}
+#rzvy_invoice_container .text-blue-m2 {
+    color: #68a3d5!important;
+}
+#rzvy_invoice_container .text-150 {
+    font-size: 150%!important;
+}
+#rzvy_invoice_container .text-60 {
+    font-size: 60%!important;
+}
+#rzvy_invoice_container .text-grey-m1 {
+    color: #7b7d81!important;
+}
+#rzvy_invoice_container .align-bottom {
+    vertical-align: bottom!important;
+}

@@ -1,0 +1,15 @@
+.DS_Store
+*.swp
+*.swo
+*~
+.env
+.env.local
+node_modules/
+vendor/
+composer.lock
+/uploads/images/*
+!/uploads/images/.gitkeep
+.git/
+.vscode/
+.idea/
+*.log

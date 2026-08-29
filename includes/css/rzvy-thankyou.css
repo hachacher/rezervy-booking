@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* Rezervy Normal CSS */
+body {
+  background: #f3f3f3;
+  color: #252525;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.42857143;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+*, *:focus {
+  outline: none;
+}
+a {
+  color: #252525;
+  text-decoration: none;
+  transition: all ease .4s;
+}
+a:hover, a:focus {
+  color: #50aba3;
+}
+a:focus, button:focus {
+  outline: none;
+  outline-offset: 0;
+}
+img {
+  max-width: 100%;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+p {
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #777777;
+}
+p a {
+  color: #50aba3;
+  text-decoration: underline;
+}
+p a:hover {
+  text-decoration: none;
+}
+::selection {
+  background: #50aba3;
+  color: #ffffff;
+}
+::-webkit-selection {
+  background: #50aba3;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #50aba3;
+  color: #ffffff;
+}
+::-o-selection {
+  background: #50aba3;
+  color: #ffffff;
+}
+::-ms-selection {
+  background: #50aba3;
+  color: #ffffff;
+}
+/* Rezervy Reseted CSS */
+b, strong {
+  font-weight: 500;
+}
+/* Rezervy Success Page CSS */
+.rzvy-success p:last-child {
+  padding-bottom: 0;
+}
+.whitebox {
+  padding: 50px;
+  margin-top: 15px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Rezervy Responsive CSS */
+@media screen and (max-width:575px) {
+  /* Rezervy Normal CSS */
+  .whitebox {
+    padding: 20px;
+  }
+} 
+#rzvy-fifth-step .fa{
+	color: #50aba3 ;
+}

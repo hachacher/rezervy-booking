@@ -1,0 +1,327 @@
+.rzvy_menubar{
+  position: absolute;
+  /* position: relative; */
+  float:left;
+  top: 0;
+  /* top: -55px; */
+  z-index: 1020;
+  left: 0;
+  height: 100%;
+  /* height: auto; */
+  width: 78px;
+  background: #11101d;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+}
+.rzvy_topbarbg{
+  background: #11101d;
+}
+.rzvy_menubar.rzvy_menubar_active{
+  width: 265px
+}
+.rzvy_menubar .rzvy_menubar_logo_main .rzvy_menubar_logo{
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.rzvy_menubar.rzvy_menubar_active .rzvy_menubar_logo_main .rzvy_menubar_logo{
+  opacity: 1;
+  pointer-events: none;
+}
+.rzvy_menubar_logo_main .rzvy_menubar_logo i{
+  font-size: 20px;
+  margin-right: 5px;
+}
+.rzvy_menubar_logo_main .rzvy_menubar_logo .rzvy_menubar_logo_name{
+  font-size: 20px;
+  font-weight: 400;
+}
+.rzvy_menubar #rzvy_menubar_toggle{
+  position: absolute;
+  cursor: pointer;
+  color: #fff;
+  top: 6px;
+  left: 50%;
+  font-size: 18px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+.rzvy_menubar.rzvy_menubar_active #rzvy_menubar_toggle{
+  left: 90%;
+}
+.rzvy_menubar ul{
+  margin-top: 18px;
+}
+.rzvy_menubar ul li{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+  margin: 5px 0;
+}
+.rzvy_menubar ul li .rzvy_menubar_nav_tooltip{
+  position: absolute;
+  /* left: 125px; */
+  left: 160px;
+  top: 0;
+  padding: 5px;
+  transform: translate(-50% , -50%);
+  border-radius: 6px;
+  /* height: 24px; */
+  /* width: 125px; */
+  width: 200px;
+  background: #fff;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+.rzvy_menubar.rzvy_menubar_active ul li .rzvy_menubar_nav_tooltip{
+  display: none;
+}
+.rzvy_menubar ul li:hover .rzvy_menubar_nav_tooltip{
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%;
+}
+.rzvy_menubar ul li input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #1d1b31;
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+.rzvy_menubar ul li .rzvy_menubar_nav_search{
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.5 ease;
+}
+.rzvy_menubar ul li .rzvy_menubar_nav_search:hover{
+  background: #fff;
+  color: #1d1b31;
+}
+.rzvy_menubar ul li a{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+.rzvy_menubar ul li.rzvy_menubar_nav_active a,
+.rzvy_menubar ul li a:hover{
+  color: #11101d;
+  background: #fff;
+}
+.rzvy_menubar ul li i{
+  font-size: 18px;
+  font-weight: 400;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+.rzvy_menubar .rzvy_menubar_nav_name{
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.rzvy_menubar.rzvy_menubar_active .rzvy_menubar_nav_name{
+  transition: 0s;
+  opacity: 1;
+  pointer-events: auto
+}
+.rzvy_menubar .rzvy_menubar__top__main{
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.rzvy_menubar .rzvy_menubar__top__main .rzvy_menubar__top{
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: none;
+  transition: all 0.4s ease;
+}
+.rzvy_menubar.rzvy_menubar_active .rzvy_menubar__top__main .rzvy_menubar__top{
+  background: #1d1b31;
+}
+.rzvy_menubar__top__main .rzvy_menubar__top .rzvy_menubar__top_details{
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+.rzvy_menubar.rzvy_menubar_active ~ .rzvy_menubar__top .rzvy_menubar__top_details{
+  opacity: 1;
+  pointer-events: auto;
+}
+.rzvy_menubar__top .rzvy_menubar__top_details img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.rzvy_menubar__top #rzvy_menubar__top_logout{
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #1d1b31;
+}
+.rzvy_menubar.rzvy_menubar_active .rzvy_menubar__top #rzvy_menubar__top_logout{
+  left: 88%;
+}
+.rzvy_menubar.rzvy_menubar_active .rzvy_menubar__top #rzvy_menubar__top_logout{
+  background: none
+}
+.rzvy__main__container{
+  position: absolute;
+  min-height: 850px;
+  height: max-content;
+  /* width: calc(100% - 78px); */
+  width: 100%;
+  /* left: 78px; */
+  /* background: #E4E9F7; */
+  box:shadow: 0 5px 10px rgba(0,0,0,0.2px);
+  transition: all 0.5s ease;
+}
+.rzvy_menubar.rzvy_menubar_active ~ .rzvy__main__container{
+  z-index: 100;
+}
+.rzvy_menubar.rzvy_menubar_active ~ .rzvy__main__container{
+  width: calc(100% - 265px);
+  left: 265px;
+
+}
+.rzvy_menubar .rzvy_menubar_nav_list{
+	padding: unset;
+}
+.rzvy_menubar_badge{
+	position: absolute;font-size: 10px;border-radius: 40px;top: 6px;box-shadow: 0px 0px 10px 3px rgb(234 122 154 / 20%);font-weight: normal;height: 20px;width: 20px;line-height: 20px;text-align: center;padding: 0px;border: 1px solid transparent;
+}
+#rzvy-supportticket-dropdown i,
+#rzvy-refund-dropdown i,
+#rzvy-notification-dropdown i{
+	margin-right: -10px;
+}
+.rzvy_menubar_usermenu_link{
+	padding: 0 0 0 0; display: flex; align-items: center; border-radius: 1.25rem 28px 28px 1.25rem;
+}
+.rzvy_menubar_usermenu_link img{
+	width: 35px; height: 35px; border-radius: 60px;
+}
+.rzvy_menubar_usermenu_link .header-info{
+	text-align: left; padding-left: 15px;
+}
+.rzvy_menubar_usermenu_link .header-info span{
+	font-size: 16px; display: block; font-weight: 400;
+}
+.rzvy_menubar_usermenu_link .header-info span strong{
+	word-break: keep-all;
+}
+.rzvy_menubar_usermenu_link .header-info p{
+	font-size: 12px !important; line-height: 1.3; word-break: keep-all;
+}
+.new-supportticket-dropdown-menu, .new-refund-request-dropdown-menu, .new-appointments-dropdown-menu{
+	right:0;left:unset;
+}
+
+.rzvy__main__sub__container{
+  width: calc(100% - 78px);
+  left: 78px;
+  float: right;
+}
+.rzvy_menubar.rzvy_menubar_active ~ .rzvy__main__sub__container{
+  width: calc(100% - 265px);
+  left: 265px;
+  float: right;
+}
+.rzvy_running_version{
+	margin-left:78px;
+	word-break: keep-all;
+}
+@media screen and (max-width: 600px) {
+	.rzvy_menubar{
+		padding: 3.5px 0;
+		top: -8px;
+		width: 55px;
+		position: fixed;
+		height: auto;
+	}
+	.rzvy_menubar.rzvy_menubar_active{
+		float: none;
+		width: 100%;
+		top: 0;
+		padding: 6px 14px;
+		position: sticky;
+	}
+	.rzvy_menubar ul li{
+		display: none;
+	}
+	.rzvy_menubar.rzvy_menubar_active ul li{
+		display: block;
+	}
+	.rzvy__main__sub__container{
+		width: 100%;
+		left: 0;
+		float: left;
+	}
+	.rzvy_menubar.rzvy_menubar_active ~ .rzvy__main__sub__container{
+		width: 100%;
+		left: 0;
+		float: left;
+	}
+	.rzvy_menubar .rzvy_menubar_logo_main .rzvy_menubar_logo{
+		height: 35px;
+	}
+	.rzvy_menubar #rzvy_menubar_toggle{
+		line-height: 40px;
+		top: 10px;
+		font-size: 30px;
+	}
+	.rzvy_menubar.rzvy_menubar_active #rzvy_menubar_toggle{
+		line-height: 50px;
+		top: 6px;
+		font-size: 22px;
+	}
+	.rzvy_running_version small{
+		display:none;
+	}
+}
