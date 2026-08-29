@@ -154,7 +154,7 @@
 		<script type="text/javascript" src="<?php echo SITE_URL; ?>includes/vendor/sweetalert/sweetalert.js?<?php echo time(); ?>"></script>
 		<script type="text/javascript" src="<?php echo SITE_URL; ?>includes/vendor/jquery/jquery.validate.min.js?<?php echo time(); ?>"></script>
 		
-		<?php include(dirname(__FILE__)."/includes/vendor/rzvyconcent/config.php"); ?>
+		<?php if(file_exists(dirname(__FILE__)."/includes/vendor/rzvyconcent/config.php")) { include(dirname(__FILE__)."/includes/vendor/rzvyconcent/config.php"); } ?>
 		
 		<?php 
 		include(dirname(__FILE__)."/includes/lib/rzvy_lang_objects.php");
